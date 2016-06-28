@@ -22,18 +22,18 @@ else if($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MYSQL INTERFACE</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="http://localhost/public/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="sqlcss.css">
     <title>MYSQL INTERFACE</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container text-center">
       <header>
-        <h1>MYSQL 제어판</h1>
+        <h1 class="jumbotron" id="mysqltitle">MYSQL 제어판</h1>
       </header>
         <div class="row">
           <form method="POST" action="">CREATE_DROP_TABLE <br><input name="table" type="text"><br><br>
-            <button type="submit" class="button">Create/Drop</button><br>
+            <button type="submit" class="btn">Create/Drop</button><br>
           </form>
             <table class="table">
               <thead>
@@ -67,9 +67,13 @@ else if($_SERVER["REQUEST_METHOD"] == "POST") {
           </tbody>
         </table>
       </div>
+      <div class ="col-lg-12"><h4><a href="../../public">To SP</a></h4></div>
+      <hr>
       <div class="row">
           <p>Say::Project Copyright All rights reserved.</p>
       </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//localhost/public/bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>

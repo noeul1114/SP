@@ -79,7 +79,7 @@ class mysql_db
         $AR = mysqli_fetch_all($result);
         for($count=1; $count<$count_all+1; $count++) {
           echo ("<tr><td>".$count."</td><td>".$AR[$count-1][0]."</td>");
-          echo ("<td><form method=\"POST\" action=\"\"><button type=\"submit\" name=\"table\" value=".$AR[$count-1][0]." class=\"button\">Del</button></td></form></tr>");
+          echo ("<td><form method=\"POST\" action=\"\"><button type=\"submit\" name=\"table\" value=".$AR[$count-1][0]." class=\"btn btn-xs\">Del</button></td></form></tr>");
         }
       }
 

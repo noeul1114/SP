@@ -8,18 +8,21 @@ require 'Mcon.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>phpProject</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//localhost/public/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
-
 </head>
-<body id="splash">
-
-<?php
-include 'header.php';
-echo '<br>';
-include 'info.php';
-?>
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-</body>
+  <body>
+    <div class="container">
+      <?php
+      include 'header.php';
+      echo '<br>';
+      include 'info.php';
+      ?>
+      <hr>
+      <footer class="text-center">Say::Project
+      Copyright All rights reserved</footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//localhost/public/bootstrap/js/bootstrap.min.js"></script>
+  </body>
 </html>
