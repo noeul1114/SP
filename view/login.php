@@ -3,16 +3,16 @@ session_start();
 require "../Mcon.php";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-  $check_name = addslashes($_POST['name']);
-  $check_pw = addslashes($_POST['pw']);
+  $check_ID = addslashes($_POST['name']);
+  $check_PW = addslashes($_POST['pw']);
 
   $checking = new mysql_func;
 
-  $ToF = $checking->login($check_name,$check_pw);
+  $ToF = $checking->login($check_ID,$check_PW);
 
   if($ToF==1)
   {
-    $_SESSION['login_user']=$check_name;
+    $_SESSION['login_user']=$check_ID;
 
     header("location: ../index.php");
   }
@@ -36,7 +36,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <body>
     <div class="container"><h2>Login</h2>
     <form method="post" action="">
-    <div>ID<input type="text"name="name"></div>
+    <div>ID<input type="text" name="name"></div>
     <div>PW<input type="password" name="pw"></div>
     <div><button type="submit" class="btn btn-primary">Confirm</button>
       <button class="btn btn-primary"><a href="view/register">Register</a></button></div>
