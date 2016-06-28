@@ -32,7 +32,7 @@ else if($_SERVER["REQUEST_METHOD"] == "POST") {
         <h1 class="jumbotron" id="mysqltitle">MYSQL 제어판</h1>
       </header>
         <div class="row">
-          <form method="POST" action="">CREATE_DROP_TABLE <br><input name="table" type="text"><br><br>
+          <form method="POST" action=""><br><input name="table" type="text"><br><br>
             <button type="submit" class="btn">Create/Drop</button><br>
           </form>
             <table class="table">

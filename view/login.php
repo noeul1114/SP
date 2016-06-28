@@ -30,15 +30,36 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>phpProject</title>
     <link rel="stylesheet" href="http://localhost/public/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
     <title>login</title>
   </head>
   <body>
-    <div class="container"><h2>Login</h2>
+    <div class="container" id="loginalign">
+      <h2>Login</h2>
+      <hr>
     <form method="post" action="">
-    <div>ID<input type="text" name="name"></div>
-    <div>PW<input type="password" name="pw"></div>
-    <div><button type="submit" class="btn btn-primary">Confirm</button>
-      <button class="btn btn-primary"><a href="view/register">Register</a></button></div>
+      <div class="row">
+        <div class="col-xs-4"></div>
+        <div class="col-xs-4">ID
+          <input class="form-control" placeholder="ID" type="text" name="name">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4"></div>
+        <div class="col-xs-4">PW
+          <input class="form-control" placeholder="PW" type="password" name="pw">
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <button type="submit" class="btn btn-success">Confirm
+        </button>
+        <button class="btn btn-info">
+          <a href="view/register">
+            <font color="white">Register</font>
+          </a>
+        </button>
+      </div>
     </form>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

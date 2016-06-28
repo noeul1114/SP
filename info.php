@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-lg-11" id="infotitle">
+  <div class="col-lg-12" id="infotitle">
       <h2 class="jumbotron">Say::Project</h2>
         <h3>세이프로젝트의 의의</h3>
         <p>민주주의 사회에서 사라진 토론을 되돌리는것에 의의를 둠</p>

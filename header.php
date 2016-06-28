@@ -20,13 +20,15 @@
                     <li><a href="">회원가입</a></li>
                     <li><a href="view/login.php"><?php
 
-                    if($_SESSION['login_user']==NULL)
-                    {
-                      echo "로그인";
+                    if(isset($_SESSION['login_user'])) {
+                      if($_SESSION['login_user']!=NULL)
+                      {
+                        echo ($_SESSION['login_user']." 님 안녕하세요");
+                        echo "<li><a href=\"action/logout.php\">로그아웃</a></li>";
+                      }
                     }
                     else {
-                      echo ($_SESSION['login_user']." 님 안녕하세요");
-                      echo "<li><a href=\"action/logout.php\">로그아웃</a></li>";
+                      echo "로그인";
                     }
                     ?></a></li>
             </ul>

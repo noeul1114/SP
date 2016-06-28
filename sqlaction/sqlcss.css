@@ -2,3 +2,12 @@
   margin-top: 100px;
   margin-bottom: 30px;
 }
+
+th {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

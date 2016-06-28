@@ -19,7 +19,7 @@ require 'Mcon.php';
       include 'info.php';
       ?>
       <hr>
-      <footer class="text-center">Say::Project
+      <footer class="text-right">Say::Project
       Copyright All rights reserved</footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
