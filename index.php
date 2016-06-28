@@ -16,10 +16,20 @@ require 'Mcon.php';
       <?php
       include 'header.php';
       echo '<br>';
-      include 'info.php';
+      if (isset($_GET['pgreq'])!=NULL) {
+        if ($_GET['pgreq']=='home') {
+          include 'home.php';
+        }
+        if ($_GET['pgreq']=='info') {
+          include 'info.php';
+        }
+      }
+      else {
+        include 'home.php';
+      }
       ?>
       <hr>
-      <footer class="text-right">Say::Project
+      <footer class="text-right" id="footer">Say::Project
       Copyright All rights reserved</footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

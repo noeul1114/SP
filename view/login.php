@@ -54,8 +54,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <div class="row">
         <button type="submit" class="btn btn-success">Confirm
         </button>
-        <button class="btn btn-info">
-          <a href="view/register">
+        <button type="button" class="btn btn-info">
+          <a href="register.php">
             <font color="white">Register</font>
           </a>
         </button>
