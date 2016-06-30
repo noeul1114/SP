@@ -1,13 +1,27 @@
 #infotitle {
   text-align: center;
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 5%;
 }
 
 #loginalign {
   text-align: center;
     margin-top: 20%;
     margin-bottom: 20%;
+}
+
+#registerform {
+  padding: 9%;
+  margin-top: 5%;
+}
+
+#registercontainer {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+#footer {
+  margin-bottom:3%;
 }
 
 .form-control {

@@ -12,12 +12,12 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-left">
-                <li><a class="navbar-brand" href="/home">Home</a></li>
-                <li><a class="navbar-brand" href="/sayit">About</a></li>
+                <li><a class="navbar-brand" href="?pgreq=home">Home</a></li>
+                <li><a class="navbar-brand" href="?pgreq=info">About</a></li>
                 <li><a class="navbar-brand" href="sqlaction/mysql_interface.php">MYSQL</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                    <li><a href="">회원가입</a></li>
+                    <li><a href="view/register.php">회원가입</a></li>
                     <li><a href="view/login.php"><?php
 
                     if(isset($_SESSION['login_user'])) {
