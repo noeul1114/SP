@@ -1,0 +1,13 @@
+<html>
+<head>
+<title>허접 게시판</tile>
+<style>
+<!--
+td {font-size : 9pt; }
+A:link { font : 9pt; color : black; text_decoration = none;
+font-family : 굴림; font-size : 9pt; }
+A:visited {text-decoration : none; color : black; font-size : 9pt;}
+A:hover { test-decoration : underline; color : black;
+font-size : 9pt; }
+-->
+</style>

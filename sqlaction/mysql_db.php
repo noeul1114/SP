@@ -11,7 +11,7 @@ class mysql_db
       {
         $DB = mysqli_connect('localhost','root','qudtlstz1','SP') or die ('fail to connect');
         $TF = ("CREATE TABLE ".$table." (
-              	num INT(10) UNSIGNED NOT NULL,
+              	num INT(10) AUTO_INCREMENT PRIMARY KEY,
               	HL VARCHAR(100) NOT NULL,
               	DESCR MEDIUMTEXT NOT NULL,
               	WRT VARCHAR(60) NOT NULL,
@@ -23,9 +23,12 @@ class mysql_db
               	N INT(10) UNSIGNED NOT NULL DEFAULT '0',
               	ST VARCHAR(50) NOT NULL DEFAULT '0',
               	IF_N TINYINT(4) NOT NULL DEFAULT '0',
+                VW INT(11) NULL DEFAULT '0',
               	V_ID INT(10) UNSIGNED NOT NULL DEFAULT '0',
               	V_NID INT(10) UNSIGNED NOT NULL DEFAULT '0',
-              	RV INT(11) UNSIGNED NOT NULL DEFAULT '0'
+              	RV INT(11) UNSIGNED NOT NULL DEFAULT '0',
+                EM VARCHAR(70) NULL DEFAULT NULL,
+                IP VARCHAR(30) NULL DEFAULT '0.0.0.0'
               )");
         var_dump($TF);
         mysqli_query($DB,$TF) or die ("<script>window.alert('Wrong Query.');location.href='mysql_interface.php';</script>");
