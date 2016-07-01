@@ -5,7 +5,7 @@
 
   $page_list_size=10;
 
-  $no = $_GET[no];
+  $no = $_GET['no'];
 
   if(!$no || $no < 0) {
     $no=0;

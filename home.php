@@ -1,12 +1,24 @@
 <div class="row">
   <div class="col-lg-12" id="infotitle">
       <h2 class="jumbotron">Say::Project</h2>
-        <h3>메인 화면입니다</h3>
-        <p>공사중</p>
-        <h3>탑 주제 불러올공간</h3>
-        <p>내용 간략</p>
-        <h3>가입회원수</h3>
-        <p>몇명</p>
+        <h3><?php
+        $DATA = new article_db;
+        $TOP = $DATA->SHOW_ARTICLE();
+        echo $TOP['HL'];?></h3>
+        <p><?=$TOP['DESCR']?></p>
+        <div>
+          <div class="progress">
+            <div class="progress-bar progress-bar-success" style="width: <?=$TOP['U']/($TOP['U']+$TOP['D']+$TOP['N'])*100?>%">
+              <span class="sr-only"></span>
+            </div>
+            <div class="progress-bar progress-bar-warning" style="width: <?=$TOP['D']/($TOP['U']+$TOP['D']+$TOP['N'])*100?>%">
+              <span class="sr-only"></span>
+            </div>
+            <div class="progress-bar progress-bar-danger" style="width: <?=$TOP['N']/($TOP['U']+$TOP['D']+$TOP['N'])*100?>%">
+              <span class="sr-only"></span>
+            </div>
+          </div>
+        </div>
         <hr>
         <br>
         <div class="row">

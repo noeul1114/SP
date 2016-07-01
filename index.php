@@ -1,6 +1,8 @@
 <?php
+session_name();
 session_start();
 require 'Mcon.php';
+require 'lib/article_db.php'
 ?>
 <!doctype html>
 <html lang="en">

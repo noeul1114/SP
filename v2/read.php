@@ -1,18 +1,16 @@
 <?php
-session_start();
-$_GET['id'] = "willypower";
-$_GET['no'] = 1;
-include "db_info.php";
+require "db_info.php";
+require "../lib/article_db.php";
 
-$id = $_GET['id'];
-$no = $_GET['no'];
-$query = "UPDATE $board SET VW=VW+1 WHERE num=$no";
-$result = mysqli_query($conn, $query);
-
-$query = "SELECT * FROM $board WHERE WRT = '$id'";
-$result = mysqli_query($conn, $query) or die ('Wrong Query');
-
-$row = mysqli_fetch_array($result);
+if((isset($_GET['id'])) && (isset($_GET['no']))) {
+  $id = $_GET['id'];
+  $no = $_GET['no'];
+}
+else {
+  header("location: list.php");
+}
+$ARTICLE = new article_db;
+$row = $ARTICLE->ENTER_ARTICLE($board, $no, $conn);
 ?>
 <html>
 <head>
@@ -38,7 +36,7 @@ $row = mysqli_fetch_array($result);
       <td><?=$row['EM']?></td>
     </tr>
     <tr>
-      <td>날&nbsp; &nbsp; 짜</td>
+      <td>날짜</td>
       <td><?=$row['C_AT']?></td>
       <td>조회수</td>
       <td><?=$row['VW']?></td>
@@ -128,16 +126,11 @@ $row = mysqli_fetch_array($result);
 ?>
         <tr>
           <td height=20 bgcolor=white align=center>
-            <a href="read.php?id=<?$row['num']?>&no=<?=$no?>">
+            <a href="read.php?id=<?$row['WRT']?>&no=<?$row['num']?>">
               <?=$row['num']?></a>
             </td>
             <td height=20 bgcolor=white> &nbsp;
-              <?
-              if($row['depth']>0)
-              echo "<img src=img/dot.gif height=1 width=" .
-              $row['depth']*7;
-              ?>
-            <a href="read.php?id=<?$row['num']?>&no=<?=$no?>">
+            <a href="read.php?id=<?$row['WRT']?>&no=<?$row['num']?>">
               <?=strip_tags($row['HL'], '<b><i>');?></a>
               </td>
               <td align=center height=20 bgcolor=white>
