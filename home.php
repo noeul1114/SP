@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-lg-12" id="infotitle">
-      <h1 class="jumbotron">Say::Project</h1>
+      <h1 id="jumbo" class="jumbotron"><strong>Say::Project</strong></h1>
+      <div></div>
       <br>
         <h3><?php
         $DATA = new article_db;
