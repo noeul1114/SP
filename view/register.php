@@ -35,10 +35,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
   if(($check_PW==$check_PW_CON)&&($ID_C==0)&&($EM_C==0))
   {
-    $ToF = $check->REGISTER($check_ID, $check_EM, $check_PW, $check_AG);
+    $FIN = $check->REGISTER($check_ID, $check_EM, $check_PW, $check_AG);
   }
 
-  if($ToF==true)
+  if($FIN==true)
   {
     header("location: success.php");
   }
