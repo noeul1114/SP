@@ -36,7 +36,7 @@ class mysql_func
         return $result;
       }
 
-      function REGISTER($ID, $PW, $EM, $AG)
+      function REGISTER($ID, $EM, $PW, $AG)
       {
         $LI = mysqli_connect('localhost','root','qudtlstz1','SP') or die ('fail to connect');
         $TF = "INSERT INTO users (ID, EM, PW, AG) VALUES('$ID', '$EM', '$PW', '$AG')";
