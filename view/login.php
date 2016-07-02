@@ -39,14 +39,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <hr>
     <form method="post" action="">
       <div class="row">
-        <div class="col-xs-4"></div>
-        <div class="col-xs-4">ID
+        <div class="col-xs-3"></div>
+        <div class="col-xs-6">ID
           <input class="form-control" placeholder="ID" type="text" name="name">
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-4"></div>
-        <div class="col-xs-4">PW
+        <div class="col-xs-3"></div>
+        <div class="col-xs-6">PW
           <input class="form-control" placeholder="PW" type="password" name="pw">
         </div>
       </div>
