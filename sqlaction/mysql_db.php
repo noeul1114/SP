@@ -86,11 +86,11 @@ class mysql_db
         }
       }
 
-      function DROP_TABLE($table)
-      {
-        $DB = mysqli_connect('localhost','root','qudtlstz1','SP') or die ('fail to connect');
-        $TF = ("DROP TABLE ".$table);
-        mysqli_query($DB,$TF);
-
-      }
+      // function DROP_TABLE($table)
+      // {
+      //   $DB = mysqli_connect('localhost','root','qudtlstz1','SP') or die ('fail to connect');
+      //   $TF = ("DROP TABLE ".$table);
+      //   mysqli_query($DB,$TF);
+      //
+      // }
   }

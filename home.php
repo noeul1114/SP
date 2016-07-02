@@ -1,20 +1,23 @@
 <div class="row">
   <div class="col-lg-12" id="infotitle">
-      <h2 class="jumbotron">Say::Project</h2>
+      <h1 class="jumbotron">Say::Project</h1>
+      <br>
         <h3><?php
         $DATA = new article_db;
         $TOP = $DATA->SHOW_ARTICLE();
         echo $TOP['HL'];?></h3>
+        <hr>
         <p><?=$TOP['DESCR']?></p>
-        <div>
+        <hr>
+        <div class="jumbotron" id="jumbotron">
           <div class="progress">
-            <div class="progress-bar progress-bar-success" style="width: <?=$TOP['U']/($TOP['U']+$TOP['D']+$TOP['N'])*100?>%">
+            <div class="progress-bar progress-bar-success progress-bar-striped" style="width: <?=$TOP['U']/($TOP['U']+$TOP['D']+$TOP['N'])*100?>%">
               <span class="sr-only"></span>
             </div>
-            <div class="progress-bar progress-bar-warning" style="width: <?=$TOP['D']/($TOP['U']+$TOP['D']+$TOP['N'])*100?>%">
+            <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: <?=$TOP['D']/($TOP['U']+$TOP['D']+$TOP['N'])*100?>%">
               <span class="sr-only"></span>
             </div>
-            <div class="progress-bar progress-bar-danger" style="width: <?=$TOP['N']/($TOP['U']+$TOP['D']+$TOP['N'])*100?>%">
+            <div class="progress-bar progress-bar-danger progress-bar-striped" style="width: <?=$TOP['N']/($TOP['U']+$TOP['D']+$TOP['N'])*100?>%">
               <span class="sr-only"></span>
             </div>
           </div>

@@ -15,6 +15,7 @@
                 <li><a class="navbar-brand" href="?pgreq=home">Home</a></li>
                 <li><a class="navbar-brand" href="?pgreq=info">About</a></li>
                 <li><a class="navbar-brand" href="sqlaction/mysql_interface.php">MYSQL</a></li>
+                <li><a class="navbar-brand" href="v2">V2</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                     <li><a href="view/register.php">회원가입</a></li>

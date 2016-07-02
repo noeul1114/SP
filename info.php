@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-lg-12" id="infotitle">
-      <h2 class="jumbotron">Say::Project</h2>
+      <h1 class="jumbotron">Say::Project</h1>
+      <br>
         <h3>세이프로젝트의 의의</h3>
         <p>민주주의 사회에서 사라진 토론을 되돌리는것에 의의를 둠</p>
         <h3>가벼우면서도 진중할수 있는 토론문화의 정착 지향</h3>

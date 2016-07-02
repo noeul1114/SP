@@ -24,6 +24,11 @@
   margin-bottom:3%;
 }
 
+#jumbotron {
+  background-color: #f7f7f7;
+  margin: 0px 4% 0px 4%;
+}
+
 .form-control {
   width: 100%;
 }

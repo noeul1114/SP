@@ -3,23 +3,19 @@ session_start();
 require "../Mcon.php";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-  $check_ID = addslashes($_POST['name']);
-  $check_PW = addslashes($_POST['pw']);
+  $check_ID = addslashes($_POST['ID']);
+  $check_PW = addslashes($_POST['PW']);
+  $check_PW_CON = addslashes($_POST['PW_CON']);
 
-  $checking = new mysql_func;
+  $check = new mysql_func;
 
-  $ToF = $checking->login($check_ID,$check_PW);
-
+  $ToF = $check->REGISTER_CHECK_ID($check_ID);
   if($ToF==1)
   {
-    $_SESSION['login_user']=$check_ID;
+    echo "<script>window.alert('중복 아이디가 존재합니다');</script>";
+    echo "<script>window.history.back();</script>";
+  }
 
-    header("location: ../index.php");
-  }
-  else {
-    echo "<script>window.alert('아이디 혹은 비밀번호가 잘못되었습니다');</script>";
-    echo "<script>location.href='login.php';</script>";
-  }
 
 }
 ?>
@@ -42,25 +38,31 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           <div class="row">
             <div class="col-xs-6 form-group">
               <label>ID</label>
-              <input type="text" class="form-control" placeholder="아이디를 입력해주세요">
+              <input type="text" name="ID" class="form-control" placeholder="아이디를 입력해주세요">
             </div>
           </div>
           <div class="row">
             <div class="col-xs-8 form-group">
               <label>Email</label>
-              <input type="email" class="form-control" placeholder="이메일을 입력해주세요">
+              <input type="email" name="EM" class="form-control" placeholder="이메일을 입력해주세요">
             </div>
           </div>
           <div class="row">
             <div class="col-xs-6 form-group">
               <label>Password</label>
-              <input type="password" class="form-control" placeholder="비밀번호를 입력해주세요">
+              <input type="password" name="PW" class="form-control" placeholder="비밀번호를 입력해주세요">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6 form-group">
+              <label>Password</label>
+              <input type="password" name="PW_CON" class="form-control" placeholder="비밀번호 확인">
             </div>
           </div>
           <div class="row">
             <div class="col-xs-4 form-group">
               <label>Age</label>
-              <input type="number" class="form-control" placeholder="나이를 입력해주세요">
+              <input type="number" name="AG" class="form-control" placeholder="나이를 입력해주세요">
             </div>
           </div>
           <br><br>
