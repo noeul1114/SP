@@ -24,20 +24,53 @@
         </div>
         <hr>
         <br>
-        <div class="row">
-          <span class="col-xs-2"></span>
-          <span>
-            <buttonc class="btn btn-danger col-xs-2">花</button>
-          </span>
-          <span class="col-xs-1"></span>
-          <span>
-            <buttonc class="btn btn-success col-xs-2">成</button>
-          </span>
-          <span class="col-xs-1"></span>
-          <span>
-            <buttonc class="btn btn-primary col-xs-2">十</button>
-          </span>
-          <span class="col-xs-2"></span>
+        <div class="row UDN">
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-4"></div>
+              <div>
+                <buttonc class="btn btn-danger col-xs-12 col-sm-8">찬성</button>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-sm-12">
+                <h4>찬성 댓글 제목</h4>
+                <p>내용내용내용내용</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-2"></div>
+              <div>
+                <buttonc class="btn btn-success col-xs-12 col-sm-8">중립</button>
+              </div>
+              <div class="col-sm-2"></div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-sm-12">
+                <h4>중립 댓글 제목</h4>
+                <p>내용내용내용내용</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="row">
+              <div>
+                <buttonc class="btn btn-primary col-xs-12 col-sm-8">반대</button>
+              </div>
+              <div class="col-sm-4"></div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-sm-12">
+                <h4>반대 댓글 제목</h4>
+                <p>내용내용내용내용</p>
+              </div>
+            </div>
+          </div>
         </div>
   </div>
 </div>
