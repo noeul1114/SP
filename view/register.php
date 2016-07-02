@@ -6,6 +6,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   $check_ID = addslashes($_POST['ID']);
   $check_PW = addslashes($_POST['PW']);
   $check_PW_CON = addslashes($_POST['PW_CON']);
+  $check_EM = strtolower(addslashes($_POST['EM']));
+  $check_AG = addslashes($_POST['AG']);
 
   $check = new mysql_func;
 
@@ -15,7 +17,31 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     echo "<script>window.alert('중복 아이디가 존재합니다');</script>";
     echo "<script>window.history.back();</script>";
   }
+  $ID_C = $ToF;
 
+  $ToF = $check->REGISTER_CHECK_EM($check_EM);
+  if($ToF==1)
+  {
+    echo "<script>window.alert('중복 이메일이 존재합니다');</script>";
+    echo "<script>window.history.back();</script>";
+  }
+  $EM_C = $ToF;
+
+  if($check_PW!=$check_PW_CON)
+  {
+    echo "<script>window.alert('비밀번호가 맞지 않습니다');</script>";
+    echo "<script>window.history.back();</script>";
+  }
+
+  if(($check_PW==$check_PW_CON)&&($ID_C==0)&&($EM_C==0))
+  {
+    $ToF = $check->REGISTER($check_ID, $check_EM, $check_PW, $check_AG);
+  }
+
+  if($ToF==true)
+  {
+    header("location: success.php");
+  }
 
 }
 ?>

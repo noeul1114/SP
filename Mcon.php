@@ -26,10 +26,28 @@ class mysql_func
         return $result;
       }
 
+      function REGISTER_CHECK_EM($EM)
+      {
+        $LI = mysqli_connect('localhost','root','qudtlstz1','SP') or die ('fail to connect');
+        $TF = "SELECT num FROM users WHERE EM = '$EM'";
+        $data = mysqli_query($LI, $TF) or die ('wrong query');
+        $result = mysqli_num_rows($data);
+
+        return $result;
+      }
+
+      function REGISTER($ID, $PW, $EM, $AG)
+      {
+        $LI = mysqli_connect('localhost','root','qudtlstz1','SP') or die ('fail to connect');
+        $TF = "INSERT INTO users (ID, EM, PW, AG) VALUES('$ID', '$EM', '$PW', '$AG')";
+        $data = mysqli_query($LI, $TF);
+
+        return $data;
+      }
+
       function logout()
       {
         session_destroy();
 
-        return void;
       }
 }
