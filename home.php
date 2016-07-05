@@ -5,7 +5,7 @@
       <br>
         <h3><?php
         $DATA = new article_db;
-        $TOP = $DATA->SHOW_ARTICLE();
+        $TOP = $DATA->SHOW_HOTARGUE();
         echo $TOP['HL'];?></h3>
         <hr>
         <p><?=$TOP['DESCR']?></p>
@@ -36,8 +36,18 @@
             <br>
             <div class="row">
               <div class="col-sm-12">
-                <h4>찬성 댓글 제목</h4>
-                <p>내용내용내용내용</p>
+                <table class="table">
+                    <?php
+                    $CM = $DATA->SHOW_HOTARGUE_COMMENT_U();
+                    foreach ($CM as $value)
+                    {
+                      echo ("<tr><td>".$value['U']." ".$value['N']." ".$value['D']." "."</td></tr>");
+                      echo ("<tr><td>".$value['DESCR']."</td></tr>");
+                      echo ("<tr><td>".$value['WRT']."</td></tr>");
+                    }
+                    ?>
+                </table>
+                <hr>
               </div>
             </div>
           </div>
@@ -52,8 +62,18 @@
             <br>
             <div class="row">
               <div class="col-sm-12">
-                <h4>중립 댓글 제목</h4>
-                <p>내용내용내용내용</p>
+                <table class="table">
+                    <?php
+                    $CM = $DATA->SHOW_HOTARGUE_COMMENT_N();
+                    foreach ($CM as $value)
+                    {
+                      echo ("<tr><td>".$value['U']." ".$value['N']." ".$value['D']." "."</td></tr>");
+                      echo ("<tr><td>".$value['DESCR']."</td></tr>");
+                      echo ("<tr><td>".$value['WRT']."</td></tr>");
+                    }
+                    ?>
+                </table>
+                <hr>
               </div>
             </div>
           </div>
@@ -67,8 +87,18 @@
             <br>
             <div class="row">
               <div class="col-sm-12">
-                <h4>반대 댓글 제목</h4>
-                <p>내용내용내용내용</p>
+                <table class="table">
+                  <?php
+                  $CM = $DATA->SHOW_HOTARGUE_COMMENT_D();
+                  foreach ($CM as $value)
+                  {
+                    echo ("<tr><td>".$value['U']." ".$value['N']." ".$value['D']." "."</td></tr>");
+                    echo ("<tr><td>".$value['DESCR']."</td></tr>");
+                    echo ("<tr><td>".$value['WRT']."</td></tr>");
+                  }
+                  ?>
+                </table>
+                <hr>
               </div>
             </div>
           </div>
