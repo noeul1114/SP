@@ -74,6 +74,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
           </div>
           <div class="row">
+            <div class="col-xs-8 form-group">
+              <label>Nickname</label>
+              <input type="text" name="NK" class="form-control" placeholder="닉네임을 입력해주세요">
+            </div>
+          </div>
+          <div class="row">
             <div class="col-xs-6 form-group">
               <label>Password</label>
               <input type="password" name="PW" class="form-control" placeholder="비밀번호를 입력해주세요">
