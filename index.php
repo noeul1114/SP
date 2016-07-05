@@ -30,8 +30,19 @@ require 'lib/article_db.php'
       }
       ?>
       <hr>
-      <footer class="text-right" id="footer">Say::Project
-      Copyright All rights reserved</footer>
+      <footer class="text-right" id="footer">
+        <div class="row">
+          <div class="col-sm-6"></div>
+          <div class="col-sm-2">건의게시판</div>
+          <div class="col-sm-2">운영원칙</div>
+          <div class="col-sm-2">제휴문의</div>
+        </div>
+        <div class="row">
+          <div id="copyright" class="col-xs-12">
+              Say::Project Copyright All rights reserved
+          </div>
+        </div>
+      </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
