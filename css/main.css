@@ -46,6 +46,11 @@
   margin-right: 5%;
 }
 
+.writericon {
+  height: 65px;
+  width: 65px;
+}
+
 .description {
  margin: 2% 2% 2% 2%;
 }

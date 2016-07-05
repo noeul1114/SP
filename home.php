@@ -23,7 +23,7 @@ $TOP = $DATA->SHOW_HOTARGUE();
         </div>
         <div class="writer">
           <div class="text-right col-sm-1 col-xs-8">
-            writer icon
+            <img class="writericon" src="img/edit.png" alt="">
           </div>
           <div class="col-sm-2 col-xs-4">
             <p class="text-center"><a href=""><?=$TOP['WRT'];?></a></p>
