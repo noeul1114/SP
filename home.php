@@ -16,9 +16,20 @@ $TOP = $DATA->SHOW_HOTARGUE();
 <div class="row">
   <div class="col-lg-12" id="infotitle">
       <h1 id="jumbo" class="jumbotron"><strong>Say::Project</strong></h1>
-      <div></div>
       <br>
-        <h3><?=$TOP['HL'];?></h3>
+      <div class="row container">
+        <div class="col-sm-9 col-xs-12">
+          <h3><?=$TOP['HL'];?></h3>
+        </div>
+        <div class="writer">
+          <div class="text-right col-sm-1 col-xs-8">
+            writer icon
+          </div>
+          <div class="col-sm-2 col-xs-4">
+            <p class="text-center"><a href=""><?=$TOP['WRT'];?></a></p>
+          </div>
+        </div>
+      </div>
         <hr>
         <p><?=$TOP['DESCR']?></p>
         <hr>
