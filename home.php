@@ -59,8 +59,8 @@ $TOP = $DATA->SHOW_HOTARGUE();
                       if ($i==1) {
                         echo ("class=\"danger\"");
                       }
-                      echo ("><td>".$value['U']." ".$value['N']." ".$value['D']."</td><td>".$value['DESCR']."</td></tr>");
-                      echo ("<tr><td colspan=\"2\">".$value['WRT']."</td></tr>");
+                      echo ("><td>".$value['U']." ".$value['N']." ".$value['D']."</td><td>".$value['WRT']."</td></tr>");
+                      echo ("<tr><td class=\"text-left\" colspan=\"2\"><article class=\"description\">".$value['DESCR']."</article></td></tr>");
                     }
                     ?>
                 </table>
@@ -89,8 +89,8 @@ $TOP = $DATA->SHOW_HOTARGUE();
                       if ($i==1) {
                         echo ("class=\"success\"");
                       }
-                      echo ("><td>".$value['U']." ".$value['N']." ".$value['D']."</td><td>".$value['DESCR']."</td></tr>");
-                      echo ("<tr><td colspan=\"2\">".$value['WRT']."</td></tr>");
+                      echo ("><td>".$value['U']." ".$value['N']." ".$value['D']."</td><td>".$value['WRT']."</td></tr>");
+                      echo ("<tr><td class=\"text-left\" colspan=\"2\"><article class=\"description\">".$value['DESCR']."</article></td></tr>");
                     }
                     ?>
                 </table>
@@ -117,8 +117,8 @@ $TOP = $DATA->SHOW_HOTARGUE();
                     if ($i==1) {
                       echo ("class=\"info\"");
                     }
-                    echo ("><td>".$value['U']." ".$value['N']." ".$value['D']."</td><td>".$value['DESCR']."</td></tr>");
-                    echo ("<tr><td colspan=\"2\">".$value['WRT']."</td></tr>");
+                    echo ("><td>".$value['U']." ".$value['N']." ".$value['D']."</td><td>".$value['WRT']."</td></tr>");
+                    echo ("<tr><td class=\"text-left\" colspan=\"2\"><article class=\"description\">".$value['DESCR']."</article></td></tr>");
                   }
                   ?>
                 </table>

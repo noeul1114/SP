@@ -46,6 +46,10 @@
   margin-right: 5%;
 }
 
+.description {
+ margin: 2% 2% 2% 2%;
+}
+
 .form-control {
   width: 100%;
 }
