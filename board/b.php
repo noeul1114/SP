@@ -1,17 +1,7 @@
 <?php
 $DATA = new article_db;
-$TOP = $DATA->SHOW_HOTARGUE();
+$TOP = $DATA->SHOW_HOTARGUE_BOARD("a");
 ?>
-<div class="row">
-  <div class="col-xs-1"></div>
-  <div class="col-xs-10">
-    <div class="col-xs-1"></div>
-    <div><button id="mainbutton" class="btn btn-default col-xs-2"><a href="?pgreq=subj">주제</a></button></div>
-    <div><button id="mainbutton" class="btn btn-default col-xs-2"><a href="?pgreq=a_board">A동</a></button></div>
-    <div><button id="mainbutton" class="btn btn-default col-xs-2"><a href="?pgreq=b_board">B동</a></button></div>
-    <div><button id="mainbutton" class="btn btn-default col-xs-2"><a href="?pgreq=c_board">C동</a></button></div>
-  </div>
-</div>
 <div class="row">
   <div class="col-lg-12" id="infotitle">
       <h1 id="jumbo" class="jumbotron"><strong>Say::Project</strong></h1>
@@ -162,4 +152,18 @@ $TOP = $DATA->SHOW_HOTARGUE();
             </div>
           </div>
         </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <table class="table table-hover">
+      <tbody>
+        <tr>
+          <td style="width:25%">ss</td>
+          <td style="width:25%">s</td>
+          <td style="width:25%">s</td>
+          <td style="width:25%">s</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

@@ -24,6 +24,15 @@ require 'lib/article_db.php'
         if ($_GET['pgreq']=='info') {
           include 'info.php';
         }
+        if ($_GET['pgreq']=='a_board') {
+          include 'board/a.php';
+        }
+        if ($_GET['pgreq']=='b_board') {
+          include 'board/b.php';
+        }
+        if ($_GET['pgreq']=='c_board') {
+          include 'board/c.php';
+        }
       }
       else {
         include 'home.php';
