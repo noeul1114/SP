@@ -18,16 +18,25 @@ $TOP = $DATA->SHOW_HOTARGUE();
       <h1 id="jumbo" class="jumbotron"><strong>Say::Project</strong></h1>
       <br>
       <div class="row container">
-        <div class="col-sm-9 col-xs-12">
-          <h3><?=$TOP['HL'];?></h3>
+        <div class="row">
+          <div class="col-sm-9 col-xs-12">
+            <h3><?=$TOP['HL'];?></h3>
+          </div>
+          <div class="writer">
+            <div class="text-right col-sm-1 col-xs-8">
+              <img class="writericon" src="img/edit.png" alt="">
+            </div>
+            <div class="col-sm-2 col-xs-4">
+              <p class="text-center"><a href=""><?=$TOP['WRT'];?></a></p>
+            </div>
+          </div>
         </div>
-        <div class="writer">
-          <div class="text-right col-sm-1 col-xs-8">
-            <img class="writericon" src="img/edit.png" alt="">
-          </div>
-          <div class="col-sm-2 col-xs-4">
-            <p class="text-center"><a href=""><?=$TOP['WRT'];?></a></p>
-          </div>
+        <div class="row text-left">
+          <small class="article_info">
+          <?php
+          echo ("찬성 : ".$TOP['U']."중립 : ".$TOP['N']."반대 : ".$TOP['D']."총투표수 : ".$TOP['V_ID']."</small><br><small class=\"article_info\">작성일자 : ".$TOP['C_AT']);
+          ?>
+         </small>
         </div>
       </div>
         <hr>
@@ -48,7 +57,8 @@ $TOP = $DATA->SHOW_HOTARGUE();
         </div>
         <hr>
         <br>
-        <div class="row UDN">
+    </div>
+        <div class="row UDN" id="infotitle">
           <div class="col-sm-4">
             <div class="row">
               <div class="col-sm-4"></div>
@@ -69,8 +79,11 @@ $TOP = $DATA->SHOW_HOTARGUE();
                       echo ("<tr ");
                       if ($i==1) {
                         echo ("class=\"danger\"");
-                      }
-                      echo ("><td>".$value['U']." ".$value['N']." ".$value['D']."</td><td>".$value['WRT']."</td></tr>");
+                    }
+                      echo ("><td><span class=\"glyphicon glyphicon-arrow-up Gicon-up\" aria-hidden=\"true\"></span><small>".$value['U']);
+                      echo (" </small><span class=\"glyphicon glyphicon-resize-small Gicon-neut\" aria-hidden=\"true\"></span><small>".$value['N']);
+                      echo (" </small><span class=\"glyphicon glyphicon-arrow-down Gicon-down\" aria-hidden=\"true\"></span><small>".$value['D']);
+                      echo ("</small></td><td>".$value['WRT']."</td></tr>");
                       echo ("<tr><td class=\"text-left\" colspan=\"2\"><article class=\"description\">".$value['DESCR']."</article></td></tr>");
                     }
                     ?>
@@ -100,13 +113,16 @@ $TOP = $DATA->SHOW_HOTARGUE();
                       if ($i==1) {
                         echo ("class=\"success\"");
                       }
-                      echo ("><td>".$value['U']." ".$value['N']." ".$value['D']."</td><td>".$value['WRT']."</td></tr>");
+                      echo ("><td><span class=\"glyphicon glyphicon-arrow-up Gicon-up\" aria-hidden=\"true\"></span><small>".$value['U']);
+                      echo (" </small><span class=\"glyphicon glyphicon-resize-small Gicon-neut\" aria-hidden=\"true\"></span><small>".$value['N']);
+                      echo (" </small><span class=\"glyphicon glyphicon-arrow-down Gicon-down\" aria-hidden=\"true\"></span><small>".$value['D']);
+                      echo ("</small></td><td>".$value['WRT']."</td></tr>");
                       echo ("<tr><td class=\"text-left\" colspan=\"2\"><article class=\"description\">".$value['DESCR']."</article></td></tr>");
                     }
                     ?>
                 </table>
-              </div>
             </div>
+              </div>
           </div>
           <div class="col-sm-4">
             <div class="row">
@@ -126,9 +142,12 @@ $TOP = $DATA->SHOW_HOTARGUE();
                     $i++;
                     echo ("<tr ");
                     if ($i==1) {
-                      echo ("class=\"info\"");
+                        echo ("class=\"info\"");
                     }
-                    echo ("><td>".$value['U']." ".$value['N']." ".$value['D']."</td><td>".$value['WRT']."</td></tr>");
+                    echo ("><td><span class=\"glyphicon glyphicon-arrow-up Gicon-up\" aria-hidden=\"true\"></span><small>".$value['U']);
+                    echo (" </small><span class=\"glyphicon glyphicon-resize-small Gicon-neut\" aria-hidden=\"true\"></span><small>".$value['N']);
+                    echo (" </small><span class=\"glyphicon glyphicon-arrow-down Gicon-down\" aria-hidden=\"true\"></span><small>".$value['D']);
+                    echo ("</small></td><td>".$value['WRT']."</td></tr>");
                     echo ("<tr><td class=\"text-left\" colspan=\"2\"><article class=\"description\">".$value['DESCR']."</article></td></tr>");
                   }
                   ?>
@@ -137,5 +156,4 @@ $TOP = $DATA->SHOW_HOTARGUE();
             </div>
           </div>
         </div>
-  </div>
 </div>

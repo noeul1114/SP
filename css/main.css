@@ -1,6 +1,5 @@
 #infotitle {
   text-align: center;
-  margin-bottom: 5%;
 }
 
 #loginalign {
@@ -42,8 +41,12 @@
 }
 
 .UDN {
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.article_info {
+  margin-left: 2%;
 }
 
 .writericon {
@@ -57,6 +60,18 @@
 
 .form-control {
   width: 100%;
+}
+
+.Gicon-up {
+  color: red;
+}
+
+.Gicon-neut {
+  color: green;
+}
+
+.Gicon-down {
+  color: blue;
 }
 
 a {
