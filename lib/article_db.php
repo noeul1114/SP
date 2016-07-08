@@ -16,7 +16,7 @@ class article_db
     return $RS;
   }
 
-  function SHOW_HOTARGUE_BOARD($board)
+  function SHOW_BOARD($board)
   {
     $LI = mysqli_connect('localhost','root','qudtlstz1','SP') or die ('fail to connect');
     mysqli_query($LI, "set names utf8");
