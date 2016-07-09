@@ -5,11 +5,11 @@ $TOP = $DATA->SHOW_HOTARGUE();
 <div class="row">
   <div class="col-xs-1"></div>
   <div class="col-xs-10">
-    <div class="col-xs-1"></div>
     <div><button id="mainbutton" class="btn btn-default col-xs-2"><a href="?pgreq=subj">주제</a></button></div>
     <div><button id="mainbutton" class="btn btn-default col-xs-2"><a href="?pgreq=board&board=a">A동</a></button></div>
     <div><button id="mainbutton" class="btn btn-default col-xs-2"><a href="?pgreq=board&board=b">B동</a></button></div>
     <div><button id="mainbutton" class="btn btn-default col-xs-2"><a href="?pgreq=board&board=c">C동</a></button></div>
+    <div><button id="mainbutton" class="btn btn-default col-xs-2"><a href="?pgreq=todaycomment">한마디</a></button></div>
   </div>
 </div>
 <div class="row">
