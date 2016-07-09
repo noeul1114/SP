@@ -27,6 +27,9 @@ require 'lib/article_db.php'
         if ($_GET['pgreq']=='board') {
           include 'board.php';
         }
+        if ($_GET['pgreq']=='todaycomment') {
+          include 'todaycomment.php';
+        }
       }
       else {
         include 'home.php';
