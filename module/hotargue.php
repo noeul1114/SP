@@ -1,6 +1,6 @@
 <?php
 $DATA = new article_db;
-$TOP = $DATA->SHOW_BOARD($_GET['board']);
+$TOP = $DATA->SHOW_BOARD_HA($_GET['board']);
 ?>
 <div class="row">
   <div class="col-lg-12" id="infotitle">
@@ -67,7 +67,7 @@ $TOP = $DATA->SHOW_BOARD($_GET['board']);
               <div class="col-sm-12">
                 <table class="table table-condensed">
                     <?php
-                    $CM = $DATA->SHOW_HOTARGUE_COMMENT_U();
+                    $CM = $DATA->SHOW_HOTARGUE_COMMENT_U($_GET['board']);
                     $i = 0;
                     foreach ($CM as $value)
                     {
@@ -100,7 +100,7 @@ $TOP = $DATA->SHOW_BOARD($_GET['board']);
               <div class="col-sm-12">
                 <table class="table table-condensed">
                     <?php
-                    $CM = $DATA->SHOW_HOTARGUE_COMMENT_N();
+                    $CM = $DATA->SHOW_HOTARGUE_COMMENT_N($_GET['board']);
                     $i = 0;
                     foreach ($CM as $value)
                     {
@@ -132,6 +132,7 @@ $TOP = $DATA->SHOW_BOARD($_GET['board']);
               <div class="col-sm-12">
                 <table class="table table-condensed">
                   <?php
+                  $CM = $DATA->SHOW_HOTARGUE_COMMENT_D($_GET['board']);
                   $i = 0;
                   foreach ($CM as $value)
                   {

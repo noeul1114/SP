@@ -77,7 +77,7 @@ $TOP = $DATA->SHOW_HOTARGUE();
               <div class="col-sm-12">
                 <table class="table table-condensed">
                     <?php
-                    $CM = $DATA->SHOW_HOTARGUE_COMMENT_U();
+                    $CM = $DATA->SHOW_HOTARGUE_COMMENT_U(null);
                     $i = 0;
                     foreach ($CM as $value)
                     {
@@ -110,7 +110,7 @@ $TOP = $DATA->SHOW_HOTARGUE();
               <div class="col-sm-12">
                 <table class="table table-condensed">
                     <?php
-                    $CM = $DATA->SHOW_HOTARGUE_COMMENT_N();
+                    $CM = $DATA->SHOW_HOTARGUE_COMMENT_N(null);
                     $i = 0;
                     foreach ($CM as $value)
                     {
@@ -142,6 +142,7 @@ $TOP = $DATA->SHOW_HOTARGUE();
               <div class="col-sm-12">
                 <table class="table table-condensed">
                   <?php
+                  $CM = $DATA->SHOW_HOTARGUE_COMMENT_D(null);
                   $i = 0;
                   foreach ($CM as $value)
                   {
