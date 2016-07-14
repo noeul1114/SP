@@ -39,7 +39,7 @@ $TOP = $DATA->SHOW_BOARD_HA($_GET['board']);
         <p><?=$TOP['DESCR']?></p>
         <hr>
         <div>
-          <div class="progress">
+          <div class="progress" id="progress">
             <div class="progress-bar progress-bar-danger progress-bar-striped" style="width: <?=$TOP['U']/($TOP['U']+$TOP['D']+$TOP['N'])*100?>%">
               <span class="sr-only"></span><?=ceil($TOP['U']/($TOP['U']+$TOP['D']+$TOP['N'])*100)?>%
             </div>
@@ -57,10 +57,11 @@ $TOP = $DATA->SHOW_BOARD_HA($_GET['board']);
         <div class="row UDN" id="infotitle">
           <div class="col-sm-4">
             <div class="row">
-              <div class="col-sm-4"></div>
+              <div class="col-sm-2"></div>
               <div>
-                <buttonc class="btn btn-danger col-xs-12 col-sm-8">찬성</button>
+                <buttonc class="btn btn-lg btn-danger col-xs-12 col-sm-8">찬성</button>
               </div>
+              <div class="col-sm-2"></div>
             </div>
             <br>
             <div class="row">
@@ -91,7 +92,7 @@ $TOP = $DATA->SHOW_BOARD_HA($_GET['board']);
             <div class="row">
               <div class="col-sm-2"></div>
               <div>
-                <buttonc class="btn btn-success col-xs-12 col-sm-8">중립</button>
+                <buttonc class="btn btn-lg btn-success col-xs-12 col-sm-8">중립</button>
               </div>
               <div class="col-sm-2"></div>
             </div>
@@ -122,10 +123,11 @@ $TOP = $DATA->SHOW_BOARD_HA($_GET['board']);
           </div>
           <div class="col-sm-4">
             <div class="row">
+              <div class="col-sm-2"></div>
               <div>
-                <buttonc class="btn btn-primary col-xs-12 col-sm-8">반대</button>
+                <buttonc class="btn btn-lg btn-primary col-xs-12 col-sm-8">반대</button>
               </div>
-              <div class="col-sm-4"></div>
+              <div class="col-sm-2"></div>
             </div>
             <br>
             <div class="row">
