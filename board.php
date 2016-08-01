@@ -56,21 +56,15 @@ $ROWS = $DATA->SHOW_BOARD_ROWS($_GET['board']);
             </tr>
             <tr>
               <td colspan=\"20\">
-                <div class=\"progress\">
+                <div class=\"progress\" id=\"board_progress\">
                   <div class=\"progress-bar progress-bar-danger progress-bar-striped\" style=\"width: ".($RS[8]/($RS[8]+$RS[9]+$RS[10])*100)."%\">
-                    <span class=\"sr-only\"></span>";
-            echo ceil($RS[8]/($RS[8]+$RS[9]+$RS[10])*100);
-            echo "%
+                    <span class=\"sr-only\"></span>
                   </div>
                   <div class=\"progress-bar progress-bar-success progress-bar-striped\" style=\"width: ".($RS[10]/($RS[8]+$RS[9]+$RS[10])*100)."%\">
-                    <span class=\"sr-only\"></span>";
-            echo ceil($RS[10]/($RS[8]+$RS[9]+$RS[10])*100);
-            echo "%
+                    <span class=\"sr-only\"></span>
                   </div>
                   <div class=\"progress-bar progress-bar-primary progress-bar-striped\" style=\"width: ".($RS[9]/($RS[8]+$RS[9]+$RS[10])*100)."%\">
-                    <span class=\"sr-only\"></span>";
-            echo ceil($RS[9]/($RS[8]+$RS[9]+$RS[10])*100);
-            echo "%
+                    <span class=\"sr-only\"></span>
                   </div>
               </td>
               <td colspan=\"5\">투표수 : $RS[14]</td>

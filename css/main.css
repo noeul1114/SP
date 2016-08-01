@@ -40,6 +40,14 @@
   margin-bottom: 4%;
 }
 
+#progress {
+  height: 50px;
+}
+
+#board_progress {
+  height: 4px;
+}
+
 .UDN {
   margin-left: 1%;
   margin-right: 1%;
