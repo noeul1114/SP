@@ -80,7 +80,7 @@ $TOP = $DATA->SHOW_BOARD_HA($_GET['board']);
                       echo (" </small><span class=\"glyphicon glyphicon-resize-small Gicon-neut\" aria-hidden=\"true\"></span><small>".$value['N']);
                       echo (" </small><span class=\"glyphicon glyphicon-arrow-down Gicon-down\" aria-hidden=\"true\"></span><small>".$value['D']);
                       echo ("</small></td><td>".$value['WRT']."</td></tr>");
-                      echo ("<tr><td class=\"text-left\" colspan=\"2\"><article class=\"description\">".$value['DESCR']."</article></td></tr>");
+                      echo ("<tr><td class=\"text-left\" colspan=\"2\"><article class=\"description\">".$value['comment']."</article></td></tr>");
                     }
                     ?>
                 </table>
@@ -113,7 +113,7 @@ $TOP = $DATA->SHOW_BOARD_HA($_GET['board']);
                       echo (" </small><span class=\"glyphicon glyphicon-resize-small Gicon-neut\" aria-hidden=\"true\"></span><small>".$value['N']);
                       echo (" </small><span class=\"glyphicon glyphicon-arrow-down Gicon-down\" aria-hidden=\"true\"></span><small>".$value['D']);
                       echo ("</small></td><td>".$value['WRT']."</td></tr>");
-                      echo ("<tr><td class=\"text-left\" colspan=\"2\"><article class=\"description\">".$value['DESCR']."</article></td></tr>");
+                      echo ("<tr><td class=\"text-left\" colspan=\"2\"><article class=\"description\">".$value['comment']."</article></td></tr>");
                     }
                     ?>
                 </table>
@@ -145,7 +145,7 @@ $TOP = $DATA->SHOW_BOARD_HA($_GET['board']);
                     echo (" </small><span class=\"glyphicon glyphicon-resize-small Gicon-neut\" aria-hidden=\"true\"></span><small>".$value['N']);
                     echo (" </small><span class=\"glyphicon glyphicon-arrow-down Gicon-down\" aria-hidden=\"true\"></span><small>".$value['D']);
                     echo ("</small></td><td>".$value['WRT']."</td></tr>");
-                    echo ("<tr><td class=\"text-left\" colspan=\"2\"><article class=\"description\">".$value['DESCR']."</article></td></tr>");
+                    echo ("<tr><td class=\"text-left\" colspan=\"2\"><article class=\"description\">".$value['comment']."</article></td></tr>");
                   }
                   ?>
                 </table>
