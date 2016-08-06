@@ -17,7 +17,7 @@ or ErrorMessage('덧글 저장하는 데 실패하였습니다.');
 ?>
 
 
-<meta http-equiv='Refresh' content='1; URL=../?pgreq=article&board=<?=$_GET['board']?>&num=<?=$_POST['article_num']?>&no=0'>
+<meta http-equiv='Refresh' content='1; URL=../?pgreq=article&board=<?=$_GET['board']?>&num=<?=$_POST['article_num']?>&no=<?=$_GET['no']?>'>
 
 
 <center>
