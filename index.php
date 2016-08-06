@@ -30,6 +30,12 @@ require 'lib/article_db.php'
         if ($_GET['pgreq']=='todaycomment') {
           include 'todaycomment.php';
         }
+        if ($_GET['pgreq']=='article') {
+          include 'read.php';
+        }
+        if ($_GET['pgreq']=='subj') {
+          include 'module/list.php';
+        }
       }
       else {
         include 'home.php';

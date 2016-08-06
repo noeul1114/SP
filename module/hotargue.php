@@ -36,7 +36,7 @@ $TOP = $DATA->SHOW_BOARD_HA($_GET['board']);
         </div>
       </div>
         <hr>
-        <p><?=$TOP['DESCR']?></p>
+        <pre><?=strip_tags($TOP['DESCR'])?></pre>
         <hr>
         <div>
           <div class="progress" id="progress">
