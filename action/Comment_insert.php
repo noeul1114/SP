@@ -1,5 +1,5 @@
 <?php
-include "../lib/library.php";
+
   $num = trim(strip_tags($_GET['num']));
   $no = trim(strip_tags($_GET['no']));
   $_POST['WRT'] = trim(strip_tags($_POST['WRT']));

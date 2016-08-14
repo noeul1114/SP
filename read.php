@@ -1,6 +1,6 @@
 <?php
 include "module/db_info.php";
-include "lib/library.php";
+
 $num=$_GET['num'];
 $no=$_GET['no'];
 $query="UPDATE $board SET VW=VW+1 WHERE num=$num";
@@ -72,16 +72,16 @@ $row = mysqli_fetch_array($result);
         <table>
           <tr>
             <td>
-              <a href=view/reply.php?num=<?=$num?>>
+              <a href='view/reply.php?num=<?=$num?>&board=<?=$_GET['board']?>&no=<?=$_GET['no']?>'>
                 [답글쓰기]
               </a>
-              <a href=view/write.php>
+              <a href='view/write.php?board=<?=$_GET['board']?>&no=<?=$_GET['no']?>'>
                 [글쓰기]
               </a>
-              <a href=view/edit.php?num=<?=$num?>>
+              <a href='view/edit.php?num=<?=$num?>&board=<?=$_GET['board']?>&no=<?=$_GET['no']?>'>
                 [수정]
               </a>
-              <a href=view/predel.php?num=<?=$num?>>
+              <a href='view/predel.php?num=<?=$num?>&board=<?=$_GET['board']?>&no=<?=$_GET['no']?>'>
                 [삭제]
               </a>
               </td>

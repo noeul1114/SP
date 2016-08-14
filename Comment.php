@@ -1,6 +1,5 @@
 <?php
  include_once "module/db_info.php";
- include_once "lib/library.php";
 
  $num = $_GET['num'];
  $sql_cmt = "SELECT * from cm_board WHERE article_num = '$num' ORDER BY num";
@@ -17,7 +16,7 @@
         <td align=right style="font-size:8pt">
           <a href="javascript:change_form(<?=$row_cmt['num']?>);"
             style="font-size:8pt;color:#999999">[수정]</a>
-          <a href="action/comment_predel.php?num=<?=$row_cmt['num']?>&article_num=<?=$num?>"
+          <a href="action/comment_predel.php?num=<?=$row_cmt['num']?>&board=<?=$_GET['board']?>&no=<?=$_GET['no']?>"
             style="font-size:8pt;color:#999999">[삭제]</a>
             <?=$row_cmt['C_AT']?>
           </td>
@@ -28,9 +27,9 @@
       </table>
       <?php } ?>
 
-
 <script>
-functon change_form(num){
+function change_form(num)
+{
   WRT = eval("WRT_" + num) . innerText;
   comment = eval("comment_"+num) .innerText;
   comment_insert.WRT.value = WRT;

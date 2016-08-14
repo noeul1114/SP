@@ -39,4 +39,24 @@ class comment_db
 
     return $RS;
   }
+
+  function SHOW_COMMENT_TODAY()
+  {
+    $LI = mysqli_connect('localhost','root','qudtlstz1','SP') or die ('fail to connect');
+    mysqli_query($LI, "set names utf8");
+    $QY = "SELECT * FROM t_comment ORDER BY VT";
+    $TEMP = mysqli_query($LI, $QY);
+
+    return $TEMP;
+  }
+
+  function SHOW_HOT_TODAY()
+  {
+    $LI = mysqli_connect('localhost','root','qudtlstz1','SP') or die ('fail to connect');
+    mysqli_query($LI, "set names utf8");
+    $QY = "SELECT * FROM t_comment ORDER BY VT DESC LIMIT 3";
+    $TEMP = mysqli_query($LI, $QY);
+
+    return $TEMP;
+  }
 }
