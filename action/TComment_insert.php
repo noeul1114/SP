@@ -7,4 +7,5 @@ $QY .= "VALUES ('$_POST[COMMENT]','$_SERVER[REMOTE_ADDR]')";
 
 $RS = mysqli_query($LI, $QY);
 
+echo("<meta http-equiv='Refresh' content='0; URL=../?pgreq=todaycomment'>");
 ?>

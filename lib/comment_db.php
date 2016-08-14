@@ -44,7 +44,7 @@ class comment_db
   {
     $LI = mysqli_connect('localhost','root','qudtlstz1','SP') or die ('fail to connect');
     mysqli_query($LI, "set names utf8");
-    $QY = "SELECT * FROM t_comment ORDER BY VT";
+    $QY = "SELECT * FROM t_comment ORDER BY num DESC";
     $TEMP = mysqli_query($LI, $QY);
 
     return $TEMP;
