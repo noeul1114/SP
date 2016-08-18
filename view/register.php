@@ -1,36 +1,51 @@
 <?php
-session_start();
+include "../lib/library.php";
+
+
+if(!isset($_SESSION))
+    {
+        session_start();
+    }
 require "../Mcon.php";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-  $check_ID = addslashes($_POST['ID']);
-  $check_PW = addslashes($_POST['PW']);
-  $check_PW_CON = addslashes($_POST['PW_CON']);
-  $check_EM = strtolower(addslashes($_POST['EM']));
-  $check_AG = addslashes($_POST['AG']);
+
+$check_ID = $check_PW_CON = $check_EM = $check_AG = $check = "";
+
+  $check_ID =$_POST['ID'];
+  $check_PW = magic_quotes($_POST['PW']);
+  $check_PW_CON = magic_quotes($_POST['PW_CON']);
+  $check_EM = strtolower(magic_quotes($_POST['EM']));
+  $check_AG = magic_quotes($_POST['AG']);
 
   $check = new mysql_func;
 
   $ToF = $check->REGISTER_CHECK_ID($check_ID);
   if($ToF==1)
   {
-    echo "<script>window.alert('중복 아이디가 존재합니다');</script>";
-    echo "<script>window.history.back();</script>";
+    $check_ID = $check_PW_CON = $check_EM = $check_AG = $check = "";
+    ErrorMessage("중복 아이디가 존재합니다.");
+  }
+  if($ToF==-1)
+  {
+    $check_ID = $check_PW_CON = $check_EM = $check_AG = $check = "";
+    ErrorMessage("아이디에 특수문자가 포함되어 있습니다.");
   }
   $ID_C = $ToF;
 
   $ToF = $check->REGISTER_CHECK_EM($check_EM);
   if($ToF==1)
   {
-    echo "<script>window.alert('중복 이메일이 존재합니다');</script>";
-    echo "<script>window.history.back();</script>";
+    $check_ID = $check_PW_CON = $check_EM = $check_AG = $check = "";
+    ErrorMessage("중복 이메일이 존재합니다");
+
   }
   $EM_C = $ToF;
 
   if($check_PW!=$check_PW_CON)
   {
-    echo "<script>window.alert('비밀번호가 맞지 않습니다');</script>";
-    echo "<script>window.history.back();</script>";
+      $check_ID = $check_PW_CON = $check_EM = $check_AG = $check = "";
+      ErrorMessage("비밀번호가 맞지 않습니다");
   }
 
   if(($check_PW==$check_PW_CON)&&($ID_C==0)&&($EM_C==0))

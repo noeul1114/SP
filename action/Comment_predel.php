@@ -22,7 +22,7 @@
 <body topmargin=0 leftmargin=0 text=#464646>
   <center>
   <BR>
-<form action="Comment_del.php?num=<?=$_GET['num']?>&article_num=<?=$_GET['article_num']?>" method=post name=fm onsubmit="return FormCheck()">
+  <form action="Comment_del.php?num=<?=$_GET['num']?>&board=<?=$_GET['board']?>&article_num=<?=$_GET['article_num']?>" method=post name=fm onsubmit="return FormCheck()">
   <table width=300 border=0 cellpadding=2 cellspacing=1 bgcolor=#777777>
     <tr>
       <td height=20 align=center bgcolor=#999999>

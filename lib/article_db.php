@@ -7,7 +7,7 @@ class article_db
 
   function SHOW_HOTARGUE()
   {
-    $LI = mysqli_connect('localhost','root','qudtlstz1','SP') or die ('fail to connect');
+    $LI = mysqli_connect('localhost','root','autoset','SP') or die ('fail to connect');
     mysqli_query($LI, "set names utf8");
     $QY = "SELECT * FROM board ORDER BY V_ID DESC LIMIT 1";
     $TEMP = mysqli_query($LI, $QY);
@@ -18,7 +18,7 @@ class article_db
 
   function SHOW_BOARD_HA($board)
   {
-    $LI = mysqli_connect('localhost','root','qudtlstz1','SP') or die ('fail to connect');
+    $LI = mysqli_connect('localhost','root','autoset','SP') or die ('fail to connect');
     mysqli_query($LI, "set names utf8");
     $QY = "SELECT * FROM board WHERE board_name = '$board' ORDER BY V_ID DESC LIMIT 1";
     $TEMP = mysqli_query($LI, $QY);
@@ -29,7 +29,7 @@ class article_db
 
   function SHOW_BOARD($board)
   {
-    $LI = mysqli_connect('localhost','root','qudtlstz1','SP') or die ('fail to connect');
+    $LI = mysqli_connect('localhost','root','autoset','SP') or die ('fail to connect');
     mysqli_query($LI, "set names utf8");
     $QY = "SELECT * FROM board WHERE board_name = '$board' ORDER BY num DESC LIMIT 15";
     $TEMP = mysqli_query($LI, $QY);
@@ -40,9 +40,9 @@ class article_db
 
   function SHOW_BOARD_ROWS($board)
   {
-    $LI = mysqli_connect('localhost','root','qudtlstz1','SP') or die ('fail to connect');
+    $LI = mysqli_connect('localhost','root','autoset','SP') or die ('fail to connect');
     mysqli_query($LI, "set names utf8");
-    $QY = "SELECT * FROM board WHERE board_name = '$board' ORDER BY num DESC LIMIT 15";
+    $QY = "SELECT * FROM t_comment ORDER BY num DESC";
     $TEMP = mysqli_query($LI, $QY);
     $RS = mysqli_num_rows($TEMP);
 
@@ -51,7 +51,7 @@ class article_db
 
   function SHOW_HOTARGUE_COMMENT_U($board)
   {
-    $LI = mysqli_connect('localhost','root','qudtlstz1','SP') or die ('fail to connect');
+    $LI = mysqli_connect('localhost','root','autoset','SP') or die ('fail to connect');
     mysqli_query($LI, "set names utf8");
     if ($board==null) {
       $QY = "SELECT num FROM board ORDER BY V_ID DESC LIMIT 1";
@@ -75,7 +75,7 @@ class article_db
 
   function SHOW_HOTARGUE_COMMENT_N($board)
   {
-    $LI = mysqli_connect('localhost','root','qudtlstz1','SP') or die ('fail to connect');
+    $LI = mysqli_connect('localhost','root','autoset','SP') or die ('fail to connect');
     mysqli_query($LI, "set names utf8");
     if ($board==null) {
       $QY = "SELECT num FROM board ORDER BY V_ID DESC LIMIT 1";
@@ -99,7 +99,7 @@ class article_db
 
   function SHOW_HOTARGUE_COMMENT_D($board)
   {
-    $LI = mysqli_connect('localhost','root','qudtlstz1','SP') or die ('fail to connect');
+    $LI = mysqli_connect('localhost','root','autoset','SP') or die ('fail to connect');
     mysqli_query($LI, "set names utf8");
     if ($board==null) {
       $QY = "SELECT num FROM board ORDER BY V_ID DESC LIMIT 1";

@@ -1,11 +1,11 @@
 <?php
  include_once "library.php"
  $_POST[WRT] = trim(strip_tags($_POST[WRT]));
- if(!$_POST[WRT]) errormessage('이름을 입력하세요');
+ if(!$_POST[WRT]) Errormessage('이름을 입력하세요');
  if(!$_POST[PW]) ErrorMessage('암호 입력하세요');
  if(!$_POST[comment]) ErrorMessage('내용을 입력하세요');
 
-  include "db_info.php";
+  include "../module/db_info.php";
 
   $query="SELECT PW from cm_board WHERE num='$_GET[num]'";
   $result=mysqli_query($conn, $query);

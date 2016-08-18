@@ -1,6 +1,5 @@
 <?php
-include "module/db_info.php";
-include "lib/library.php";
+include "/module/db_info.php";
 $num=$_GET['num'];
 $no=$_GET['no'];
 $query="UPDATE $board SET VW=VW+1 WHERE num=$num";
@@ -72,16 +71,16 @@ $row = mysqli_fetch_array($result);
         <table>
           <tr>
             <td>
-              <a href=view/reply.php?num=<?=$num?>>
+              <a href='view/reply.php?num=<?=$num?>&board=<?=$_GET['board']?>&no=<?=$_GET['no']?>'>
                 [답글쓰기]
               </a>
-              <a href=view/write.php>
+              <a href='view/write.php?board=<?=$_GET['board']?>&no=<?=$_GET['no']?>'>
                 [글쓰기]
               </a>
-              <a href=view/edit.php?num=<?=$num?>>
+              <a href='view/edit.php?num=<?=$num?>&board=<?=$_GET['board']?>&no=<?=$_GET['no']?>'>
                 [수정]
               </a>
-              <a href=view/predel.php?num=<?=$num?>>
+              <a href='view/predel.php?num=<?=$num?>&board=<?=$_GET['board']?>&no=<?=$_GET['no']?>'>
                 [삭제]
               </a>
               </td>
@@ -105,11 +104,11 @@ $row = mysqli_fetch_array($result);
     <table class="table table-condensed text-center">
 
           <?php
-          while( $row = @mysqli_fetch_array($result) ){
+          while($row = @mysqli_fetch_array($result)){
 ?>
         <tr>
           <td>
-            <a href="read.php?num=<?php$row['num']?>&no=<?=$no?>">
+            <a href="read.php?num=<?php $row[num]?>&no=<?=$no?>">
               <?=$row['num']?></a>
             </td>
             <td> &nbsp;
@@ -118,17 +117,17 @@ $row = mysqli_fetch_array($result);
               echo "<img src=img/dot.gif height=1 width=" .
               $row[DPT]*7 . ">=>";
               ?>
-            <a href="read.php?num=<?php$row['num']?>&no=<?=$no?>">
-              <?=strip_tags($row['HL'], '<b><i>');?></a>
+            <a href="read.php?num=<?php $row[num]?>&no=<?=$no?>">
+              <?=strip_tags( $row['HL'], '<b><i>');?></a>
               </td>
               <td>
-                  <a href="mailto:<?=$row['EM']?>"><?=$row['WRT']?></a>
+                  <a href="mailto:<?= $row['EM']?>"><?= $row['WRT']?></a>
               </td>
               <td>
-                <?=date("Y-m-d",$row['C_AT'])?>
+                <?=date("Y-m-d", $row['C_AT'])?>
               </td>
               <td>
-                <?=$row['VW']?>
+                <?= $row['VW']?>
               </td>
             </tr>
 

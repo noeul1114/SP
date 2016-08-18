@@ -13,7 +13,7 @@ $result=mysqli_query($conn, $query);
 
 @mysqli_close($conn);
 
-echo("<meta http-equiv='Refresh' content='1; URL=../?pgreq=board&board=a'>");
+echo("<meta http-equiv='Refresh' content='1; URL=../?pgreq=board&board=$_POST[board_name]'>");
 ?>
 <center>
   <font size=2>정상적으로 저장됨</font>

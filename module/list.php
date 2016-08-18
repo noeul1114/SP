@@ -59,7 +59,7 @@ $PHP_SELF = $_SERVER['PHP_SELF'];
         <tbody>
           <?php
 
-            $LI = mysqli_connect('localhost','root','qudtlstz1','SP') or die ('fail to connect');
+            $LI = mysqli_connect('localhost','root','autoset','SP') or die ('fail to connect');
             mysqli_query($LI, "set names utf8");
             $QY = "SELECT * FROM board WHERE board_name = '$_GET[board]' ORDER BY THD DESC LIMIT $no, $page_size";
             $TEMP = mysqli_query($LI, $QY);

@@ -1,7 +1,11 @@
 <?php
-session_start();
-require 'Mcon.php';
-require 'lib/article_db.php'
+if(!isset($_SESSION))
+    {
+        session_start();
+    }
+require '/Mcon.php';
+require '/lib/article_db.php'
+require 'lib/library.php';
 ?>
 <!doctype html>
 <html lang="en">
@@ -9,36 +13,43 @@ require 'lib/article_db.php'
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>phpProject</title>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/sp/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/sp/css/main.css">
 </head>
   <body>
     <div class="container">
       <?php
-      include 'header.php';
+      include '/header.php';
       echo '<br>';
+
+
+
+
+
+
+
       if (isset($_GET['pgreq'])!=NULL) {
         if ($_GET['pgreq']=='home') {
-          include 'home.php';
+          include '/home.php';
         }
         if ($_GET['pgreq']=='info') {
-          include 'info.php';
+          include '/info.php';
         }
         if ($_GET['pgreq']=='board') {
-          include 'board.php';
+          include '/board.php';
         }
         if ($_GET['pgreq']=='todaycomment') {
-          include 'todaycomment.php';
+          include '/todaycomment.php';
         }
         if ($_GET['pgreq']=='article') {
-          include 'read.php';
+          include '/read.php';
         }
         if ($_GET['pgreq']=='subj') {
-          include 'module/list.php';
+          include '/module/list.php';
         }
       }
       else {
-        include 'home.php';
+        include '/home.php';
       }
       ?>
       <hr>

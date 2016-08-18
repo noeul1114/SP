@@ -1,17 +1,7 @@
 <?php
 $DATA = new article_db;
 $TOP = $DATA->SHOW_HOTARGUE();
-?>
-<div class="row">
-  <div class="col-xs-1"></div>
-  <div class="col-xs-10">
-    <div><button id="mainbutton" class="btn btn-default col-xs-2"><a href="?pgreq=subj&board=s">주제</a></button></div>
-    <div><button id="mainbutton" class="btn btn-default col-xs-2"><a href="?pgreq=board&board=a">A동</a></button></div>
-    <div><button id="mainbutton" class="btn btn-default col-xs-2"><a href="?pgreq=board&board=b">B동</a></button></div>
-    <div><button id="mainbutton" class="btn btn-default col-xs-2"><a href="?pgreq=board&board=c">C동</a></button></div>
-    <div><button id="mainbutton" class="btn btn-default col-xs-2"><a href="?pgreq=todaycomment">한마디</a></button></div>
-  </div>
-</div>
+?> //메뉴 부분 짜름
 <div class="row">
   <div class="col-lg-12" id="infotitle">
       <h1 id="jumbo" class="jumbotron"><strong>Say::Project</strong></h1>

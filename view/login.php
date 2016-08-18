@@ -1,13 +1,19 @@
 <?php
-session_start();
+include "../lib/library.php";
+if(!isset($_SESSION))
+    {
+        session_start();
+    }
 require "../Mcon.php";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-  $check_ID = addslashes($_POST['name']);
-  $check_PW = addslashes($_POST['pw']);
+    if(!ctype_alnum($_POST['name'])){
+    ErrorMessage("허용하지 않는 아이디를 입력하셨습니다.");
+    }
+  $check_ID =  $_POST['name'];
+  $check_PW =  magic_quotes($_POST['pw']);
 
   $checking = new mysql_func;
-
   $ToF = $checking->login($check_ID,$check_PW);
 
   if($ToF==1)
@@ -17,8 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     header("location: ../index.php");
   }
   else {
-    echo "<script>window.alert('아이디 혹은 비밀번호가 잘못되었습니다');</script>";
-    echo "<script>location.href='login.php';</script>";
+    ErrorMessage("아이디 혹은 비밀번호가 잘못되었습니다");
   }
 
 }

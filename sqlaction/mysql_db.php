@@ -9,7 +9,7 @@ class mysql_db
 
       function CREATE_TABLE($table)
       {
-        $DB = mysqli_connect('localhost','root','qudtlstz1','SP') or die ('fail to connect');
+        $DB = mysqli_connect('localhost','root','autoset','SP') or die ('fail to connect');
         $TF = ("CREATE TABLE ".$table." (
               	num INT(10) AUTO_INCREMENT PRIMARY KEY,
               	HL VARCHAR(100) NOT NULL,
@@ -38,7 +38,7 @@ class mysql_db
 
       function SELECT_FROM_USERS()
       {
-        $DB = mysqli_connect('localhost','root','qudtlstz1','SP') or die ('fail to connect');
+        $DB = mysqli_connect('localhost','root','autoset','SP') or die ('fail to connect');
         $TF = "SELECT * FROM users";
         $result = mysqli_query($DB,$TF) or die ("<script>window.alert('Wrong Query.');location.href='mysql_interface.php';</script>");
         $count_all = mysqli_num_rows($result);
@@ -57,7 +57,7 @@ class mysql_db
 
       function MATCH_TABLE($table)
       {
-        $DB = mysqli_connect('localhost','root','qudtlstz1','SP') or die ('fail to connect');
+        $DB = mysqli_connect('localhost','root','autoset','SP') or die ('fail to connect');
         $TF = "SHOW TABLES";
         $result = mysqli_query($DB,$TF) or die ("<script>window.alert('Wrong Query.');location.href='mysql_interface.php';</script>");
         $AR = mysqli_fetch_all($result);
@@ -74,7 +74,7 @@ class mysql_db
 
       function SHOW_TABLES()
       {
-        $DB = mysqli_connect('localhost','root','qudtlstz1','SP') or die ('fail to connect');
+        $DB = mysqli_connect('localhost','root','autoset','SP') or die ('fail to connect');
         $TF = "SHOW TABLES";
         $result = mysqli_query($DB,$TF) or die ("<script>window.alert('Wrong Query.');location.href='mysql_interface.php';</script>");
         $count_all = mysqli_num_rows($result);

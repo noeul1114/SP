@@ -14,25 +14,40 @@
             <ul class="nav navbar-nav navbar-left">
                 <li><a class="navbar-brand" href="?pgreq=home">Home</a></li>
                 <li><a class="navbar-brand" href="?pgreq=info">About</a></li>
-                <li><a class="navbar-brand" href="sqlaction/mysql_interface.php">MYSQL</a></li>
-                <li><a class="navbar-brand" href="v2">V2</a></li>
+                <li><a class="navbar-brand" href="/public/sqlaction/mysql_interface.php">MYSQL</a></li>
+                <li><a class="navbar-brand" href="/public/v2">V2</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                    <li><a href="view/register.php">회원가입</a></li>
-                    <li><a href="view/login.php"><?php
+              <?php
 
-                    if(isset($_SESSION['login_user'])) {
-                      if($_SESSION['login_user']!=NULL)
-                      {
-                        echo ($_SESSION['login_user']." 님 안녕하세요");
-                        echo "<li><a href=\"action/logout.php\">로그아웃</a></li>";
-                      }
+              if(isset($_SESSION['login_user'])) {
+                if($_SESSION['login_user']!=NULL)
+                {
+                  echo ("<li><a>".$_SESSION['login_user']." 님 안녕하세요</a></li>");
+?>
+                  <li><a href="/sp/action/logout.php">로그아웃</a></li>
+                  <?php
+                }
                     }
                     else {
-                      echo "로그인";
+                      ?>
+                      <li><a href="/sp/view/register.php">회원가입</a></li>
+                      <li><a href="/sp/view/login.php">로그인</a></li>
+                      <?php
                     }
-                    ?></a></li>
+                    ?>
             </ul>
         </div>
     </div>
 </nav>
+
+<div class="row">
+  <div class="col-xs-1"></div>
+  <div class="col-xs-10">
+    <div><a href="?pgreq=todaycomment"><button id="mainbutton" class="btn btn-default col-xs-2">주제</button></a></div>
+    <div><a href="?pgreq=board&board=a"><button id="mainbutton" class="btn btn-default col-xs-2">A동</button></a></div>
+    <div><a href="?pgreq=board&board=b"><button id="mainbutton" class="btn btn-default col-xs-2">B동</button></a></div>
+    <div><a href="?pgreq=board&board=c"><button id="mainbutton" class="btn btn-default col-xs-2">C동</button></a></div>
+    <div><a href="?pgreq=todaycomment"><button id="mainbutton" class="btn btn-default col-xs-2">한마디</button></a></div>
+  </div>
+</div>
